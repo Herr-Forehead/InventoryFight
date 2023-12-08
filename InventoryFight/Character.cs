@@ -3,7 +3,7 @@
 public class Character
 {
     public string name;
-    public Inventory Inventory;
+    public Inventory Inventory = new();
     public int Maxhp;
     public int CurrentHp;
     public int MaxMp;

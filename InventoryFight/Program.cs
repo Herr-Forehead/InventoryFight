@@ -10,6 +10,7 @@ Item peasant = new();
 Item talisman = new();
 Item superUltraNuke = new();
 
+Character.money = 50;
 potion.cost = 10;
 peasant.cost = 2;
 talisman.cost = 25;
@@ -17,9 +18,6 @@ superUltraNuke.cost = 50;
 
 Console.WriteLine("What is your name??");
 Character.name = Console.ReadLine();
-Character.money = 50;
-
-// Console.WriteLine($"Okay, {Character.name} do you want to start the game?");
 
 while (restart == "yes")
 {
@@ -50,25 +48,30 @@ while (restart == "yes")
         shopChoice = Console.ReadLine();
         if (shopChoice == "Peasant" || shopChoice == "peasant" || shopChoice == "1")
         {
-            Character.Inventory.Add(peasant);
             Character.money -= peasant.cost;
+            Character.Inventory.Add(peasant);
+            Console.WriteLine("Congrats, you bought a Peasant!!");
         }
         else if (shopChoice == "Potion" || shopChoice == "potion" || shopChoice == "2")
         {
-            Character.Inventory.Add(potion);
             Character.money -= potion.cost;
+            Character.Inventory.Add(potion);
         }
         else if (shopChoice == "Talisman" || shopChoice == "talisman" || shopChoice == "3")
         {
-            Character.Inventory.Add(talisman);
             Character.money -= talisman.cost;
+            Character.Inventory.Add(talisman);
         }
         else if (shopChoice == "Nuke" || shopChoice == "nuke" || shopChoice == "4")
         {
-            Character.Inventory.Add(superUltraNuke);
             Character.money -= superUltraNuke.cost;
+            Character.Inventory.Add(superUltraNuke);
         }
         else if (shopChoice == "no")
+        {
+
+        }
+        else
         {
 
         }
